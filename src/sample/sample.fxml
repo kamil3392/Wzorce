@@ -1,8 +1,13 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<GridPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-</GridPane>
+<AnchorPane fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="279.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+   <children>
+      <Button fx:id="newTraining" onAction="#handleButtonAction" layoutX="60.0" layoutY="43.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="165.0" text="ZAPLANUJ NOWY TRENING" />
+      <Button fx:id="statisticsTraining" onAction="#handleButtonAction" layoutX="60.0" layoutY="158.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="165.0" text="STATYSTYKI TRENINGÓW" />
+   </children>
+
+</AnchorPane>
