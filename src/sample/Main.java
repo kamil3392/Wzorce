@@ -12,6 +12,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 public class Main extends Application {
 
     @Override
@@ -36,6 +38,7 @@ public class Main extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.show();
+        String a;
 
     }
 
