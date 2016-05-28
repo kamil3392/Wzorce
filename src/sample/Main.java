@@ -23,6 +23,7 @@ public class Main extends Application {
         primaryStage.setTitle("Plan treningowy");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
+        dsfgdfgdsfg
     }
 
 }
