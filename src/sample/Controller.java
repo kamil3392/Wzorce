@@ -15,28 +15,33 @@ import java.io.IOException;
 public class Controller {
 
     @FXML
-    public Button newTraining, statisticsTraining;
-
+    public Button home, history, statistics, addExercise;
     @FXML
     private AnchorPane content;
+
+    Parent root;
+
 
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         Button btn = (Button) event.getSource();
         String id = btn.getId();
-        Parent newParent;
 
-        if (id == "newTraining") {
-            newParent = FXMLLoader.load(getClass().getResource("newTraining.fxml"));
-        } else {
-            newParent = FXMLLoader.load(getClass().getResource("statisticsTraining.fxml"));
+        System.out.println(id);
+
+        if (id.equals("addExercise")) {
+            root = FXMLLoader.load(getClass().getResource("addExercise.fxml"));
+        }else if(id.equals("home")){
+            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        }else if(id.equals("history")){
+            root = FXMLLoader.load(getClass().getResource("history.fxml"));
+        }else{
+            root = FXMLLoader.load(getClass().getResource("statistics.fxml"));
         }
 
-        Scene newTrainingScene = new Scene(newParent);
-        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        appStage.setScene(newTrainingScene);
-        appStage.show();
-
+        Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
 }
