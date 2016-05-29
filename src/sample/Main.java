@@ -1,4 +1,5 @@
 package sample;
+
 import dao.JDBCTrainingDAO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +11,10 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-/*        JDBCTrainingDAO connect =new JDBCTrainingDAO();
+        JDBCTrainingDAO connect =new JDBCTrainingDAO();
         connect.getConnection();
         connect.select();
-        connect.closeConnection();*/
+        connect.closeConnection();
         launch(args);
     }
 
@@ -21,8 +22,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Plan treningowy");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
-
 }

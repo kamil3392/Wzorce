@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane id="window" minWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <HBox id="hBoxTop" alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="home" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="Home">
+                    <HBox.margin>
+                        <Insets right="2.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="history" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="History">
+                    <HBox.margin>
+                        <Insets right="2.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="statistics" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="Statistics">
+                    <HBox.margin>
+                        <Insets right="2.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="addExercise" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="Add exercise">
+                    <HBox.margin>
+                        <Insets top="2.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="5.0" />
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets bottom="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Name" />
+          <TableColumn prefWidth="75.0" text="Description" />
+            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="75.0" text="Time" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <opaqueInsets>
+            <Insets left="10.0" right="10.0" />
+         </opaqueInsets>
+      </TableView>
+   </center>
+</BorderPane>
