@@ -4,143 +4,156 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<BorderPane id="window" minWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane id="window" minWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.addExerciseController">
     <top>
         <HBox fx:id="hBoxTop" alignment="TOP_CENTER" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="home" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="Home">
+                <Button fx:id="home" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0"
+                        prefWidth="130.0" text="Home">
                     <HBox.margin>
-                        <Insets right="2.0" top="2.0" />
+                        <Insets right="2.0" top="2.0"/>
                     </HBox.margin>
                 </Button>
-                <Button fx:id="history" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="History">
+                <Button fx:id="history" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0"
+                        prefWidth="130.0" text="History">
                     <HBox.margin>
-                        <Insets right="2.0" top="2.0" />
+                        <Insets right="2.0" top="2.0"/>
                     </HBox.margin>
                 </Button>
-                <Button fx:id="statistics" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="Statistics">
+                <Button fx:id="statistics" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0"
+                        prefWidth="130.0" text="Statistics">
                     <HBox.margin>
-                        <Insets right="2.0" top="2.0" />
+                        <Insets right="2.0" top="2.0"/>
                     </HBox.margin>
                 </Button>
-                <Button fx:id="addExercise" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="130.0" text="Add exercise">
+                <Button fx:id="addExercise" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0"
+                        prefWidth="130.0" text="Add exercise">
                     <HBox.margin>
-                        <Insets top="2.0" />
+                        <Insets top="2.0"/>
                     </HBox.margin>
                 </Button>
             </children>
             <opaqueInsets>
-                <Insets bottom="5.0" />
+                <Insets bottom="5.0"/>
             </opaqueInsets>
             <BorderPane.margin>
-                <Insets bottom="10.0" />
+                <Insets bottom="10.0"/>
             </BorderPane.margin>
         </HBox>
     </top>
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin></DatePicker>
-            <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton" GridPane.columnIndex="1">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-            </SplitMenuButton>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+
+                <DatePicker fx:id="startDate"  onAction="#getDate" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </DatePicker>
+
+                <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton" GridPane.columnIndex="1">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                        <MenuItem mnemonicParsing="false" text="Action 1"/>
+                        <MenuItem mnemonicParsing="false" text="Action 2"/>
                     </items>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </SplitMenuButton>
-                  <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </SplitMenuButton>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </SplitMenuButton>
-                  <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </SplitMenuButton>
-               </children>
-            </HBox>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-            </TextField>
-            <Pane GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <children>
-                  <Button contentDisplay="CENTER" layoutX="100.0" layoutY="1.0" mnemonicParsing="false" text="Button">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-               </children>
-               <GridPane.margin>
-                  <Insets top="3.0" />
-               </GridPane.margin>
-            </Pane>
-            <Label text="Type of sport" wrapText="true" />
-            <Label text="Start date" GridPane.rowIndex="1" />
-            <Label text="Start time" GridPane.rowIndex="2" />
-            <Label text="Exercise time" GridPane.rowIndex="3" />
-            <Label text="Short description" GridPane.rowIndex="4" />
-         </children>
-         <opaqueInsets>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </opaqueInsets>
-         <BorderPane.margin>
-            <Insets left="10.0" right="10.0" top="5.0" />
-         </BorderPane.margin>
-         <padding>
-            <Insets bottom="10.0" />
-         </padding>
-      </GridPane>
-   </center>
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </SplitMenuButton>
+
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                                <MenuItem mnemonicParsing="false" text="Action 2"/>
+                            </items>
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                                <MenuItem mnemonicParsing="false" text="Action 2"/>
+                            </items>
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </SplitMenuButton>
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <children>
+                        <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                                <MenuItem mnemonicParsing="false" text="Action 2"/>
+                            </items>
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                                <MenuItem mnemonicParsing="false" text="Action 2"/>
+                            </items>
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </SplitMenuButton>
+                    </children>
+                </HBox>
+
+                <TextField fx:id="shortDescription" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+
+                <Pane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <children>
+                        <Button onAction="#insert" contentDisplay="CENTER" layoutX="100.0" layoutY="1.0" mnemonicParsing="false"
+                                text="Button">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                    <GridPane.margin>
+                        <Insets top="3.0"/>
+                    </GridPane.margin>
+                </Pane>
+                <Label text="Type of sport" wrapText="true"/>
+                <Label text="Start date" GridPane.rowIndex="1"/>
+                <Label text="Start time" GridPane.rowIndex="2"/>
+                <Label text="Exercise time" GridPane.rowIndex="3"/>
+                <Label text="Short description" GridPane.rowIndex="4"/>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" top="5.0"/>
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="10.0"/>
+            </padding>
+        </GridPane>
+    </center>
 </BorderPane>

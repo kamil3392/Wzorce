@@ -7,20 +7,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
+public class addExerciseController {
 
     @FXML
-    public Button home, history, statistics, addExercise;
-    @FXML
-    private AnchorPane content;
-
+    DatePicker startDate;
+    public TextField shortDescription;
     Parent root;
-
 
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
@@ -40,6 +38,24 @@ public class Controller {
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+    }
+
+    @FXML
+    private String getDate(){
+        return startDate.getValue().toString();
+    }
+
+    @FXML
+    private String getDescription(){
+        return shortDescription.getText();
+    }
+
+    @FXML
+    private void insert(){
+
+        System.out.println(getDate());
+        System.out.println(getDescription());
+
     }
 
 }
