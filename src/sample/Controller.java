@@ -21,7 +21,6 @@ public class Controller {
 
     Parent root;
 
-
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         Button btn = (Button) event.getSource();

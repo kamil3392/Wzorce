@@ -64,7 +64,7 @@
                     </GridPane.margin>
                 </DatePicker>
 
-                <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton" GridPane.columnIndex="1">
+                <SplitMenuButton fx:id="kindSport" mnemonicParsing="false" text="Select sport" GridPane.columnIndex="1">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Action 1"/>
                         <MenuItem mnemonicParsing="false" text="Action 2"/>

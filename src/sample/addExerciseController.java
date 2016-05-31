@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -18,6 +19,7 @@ public class addExerciseController {
     @FXML
     DatePicker startDate;
     public TextField shortDescription;
+    public SplitMenuButton kindSport;
     Parent root;
 
     @FXML
@@ -38,6 +40,7 @@ public class addExerciseController {
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
     }
 
     @FXML
@@ -50,12 +53,11 @@ public class addExerciseController {
         return shortDescription.getText();
     }
 
+
     @FXML
     private void insert(){
-
         System.out.println(getDate());
         System.out.println(getDescription());
-
     }
 
 }
